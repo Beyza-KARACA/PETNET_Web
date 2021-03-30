@@ -1,0 +1,33 @@
+﻿@model PETNET.Models.Category
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>@dil.HomeTexts.sil</h2>
+
+<h3>@dil.HomeTexts.siluyar</h3>
+<div>
+    <h4>@dil.HomeTexts.kategoriler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.kategoriler)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategorieName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink(dil.HomeTexts.geri, "Index")
+        </div>
+    }
+</div>

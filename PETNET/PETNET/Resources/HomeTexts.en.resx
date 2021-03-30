@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="altblog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="altsahiplendirme" xml:space="preserve">
+    <value>Rehoming</value>
+  </data>
+  <data name="altsahiplenme" xml:space="preserve">
+    <value>Adoption</value>
+  </data>
+  <data name="blogbuton" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="blogmetin" xml:space="preserve">
+    <value>PETNET users can share their experiences and thoughts via blogs!</value>
+  </data>
+  <data name="forum" xml:space="preserve">
+    <value>FORUM</value>
+  </data>
+  <data name="girisyap" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="haklar" xml:space="preserve">
+    <value>ABOUT ANIMAL RIGHTS</value>
+  </data>
+  <data name="haklartext" xml:space="preserve">
+    <value>Animal rights teach us that certain things are wrong as a matter of principle, that there are some things that it is morally wrong to do to animals.
+
+Human beings must not do those things, no matter what the cost to humanity of not doing them.
+
+Human beings must not do those things, even if they do them in a humane way.
+
+For example: if animals have a right not to be bred and killed for food then animals must not be bred and killed for food.
+
+It makes no difference if the animals are given 5-star treatment throughout their lives and then killed humanely without any fear or pain - it's just plain wrong in principle, and nothing can make it right.</value>
+  </data>
+  <data name="iletisim" xml:space="preserve">
+    <value>CONTACT</value>
+  </data>
+  <data name="kaydol" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="nedir" xml:space="preserve">
+    <value>What is PETNET?</value>
+  </data>
+  <data name="nedirmetin" xml:space="preserve">
+    <value>PETNET is a free pet adoption and rehoming platform. Besides, you can donate foundations looking out for animals' rights, read different blogs and create your own blog.</value>
+  </data>
+  <data name="petnet" xml:space="preserve">
+    <value>PETNET</value>
+  </data>
+  <data name="sahiplenbuton" xml:space="preserve">
+    <value>Adopt!</value>
+  </data>
+  <data name="sahiplendirbuton" xml:space="preserve">
+    <value>Rehome!</value>
+  </data>
+  <data name="sahiplendirmetin" xml:space="preserve">
+    <value>Pets adopted with great excitements and got abandoned, need home. Instead of abandon your pet on the streets you need to rehome them.</value>
+  </data>
+  <data name="sahiplenme" xml:space="preserve">
+    <value>ADOPTION</value>
+  </data>
+  <data name="sahiplenmetin" xml:space="preserve">
+    <value>You can view pets waiting to be adopted here and you can contact with owner in case.</value>
+  </data>
+  <data name="sahiplendirme" xml:space="preserve">
+    <value>REHOMING</value>
+  </data>
+  <data name="adminpanel" xml:space="preserve">
+    <value>ADMIN PANEL</value>
+  </data>
+  <data name="bagismi" xml:space="preserve">
+    <value>WANT DONATE?</value>
+  </data>
+  <data name="cikis" xml:space="preserve">
+    <value>LOG OUT</value>
+  </data>
+  <data name="baslik" xml:space="preserve">
+    <value>TITLE</value>
+  </data>
+  <data name="blogistermi" xml:space="preserve">
+    <value>WOULD YOU LIKE TO BE A BLOGGER ?</value>
+  </data>
+  <data name="bloglar" xml:space="preserve">
+    <value>BLOGS</value>
+  </data>
+  <data name="bolum" xml:space="preserve">
+    <value>SAKARYA UNIVERSITY COMPUTER SCIENCE</value>
+  </data>
+  <data name="cinsi" xml:space="preserve">
+    <value>Breed</value>
+  </data>
+  <data name="cinsiyeti" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="detaylar" xml:space="preserve">
+    <value>DETAILS</value>
+  </data>
+  <data name="duzenle" xml:space="preserve">
+    <value>EDIT</value>
+  </data>
+  <data name="duzenlenecekblog" xml:space="preserve">
+    <value>BLOG BEING EDITED</value>
+  </data>
+  <data name="ekle" xml:space="preserve">
+    <value>ADD</value>
+  </data>
+  <data name="eklenecekblog" xml:space="preserve">
+    <value>BLOG TO BE ADDED</value>
+  </data>
+  <data name="ekleyenkullanici" xml:space="preserve">
+    <value>ADDED BY</value>
+  </data>
+  <data name="eskifotograf" xml:space="preserve">
+    <value>OLD PHOTO</value>
+  </data>
+  <data name="forumlar" xml:space="preserve">
+    <value>Forums</value>
+  </data>
+  <data name="fotograf" xml:space="preserve">
+    <value>PHOTO</value>
+  </data>
+  <data name="geri" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="girisbuton" xml:space="preserve">
+    <value>LOGIN</value>
+  </data>
+  <data name="guncelle" xml:space="preserve">
+    <value>UPDATE</value>
+  </data>
+  <data name="icerik" xml:space="preserve">
+    <value>CONTENT</value>
+  </data>
+  <data name="iletisimbilgi" xml:space="preserve">
+    <value>CONTACT INFORMATIONS</value>
+  </data>
+  <data name="isimsoyad" xml:space="preserve">
+    <value>NAME-SURNAME</value>
+  </data>
+  <data name="ismi" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="kategoriler" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="kaydet" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="kayitol" xml:space="preserve">
+    <value>SIGN IN</value>
+  </data>
+  <data name="kullaniciadi" xml:space="preserve">
+    <value>USERNAME</value>
+  </data>
+  <data name="petnetadmini" xml:space="preserve">
+    <value>PETNET ADMIN</value>
+  </data>
+  <data name="profil" xml:space="preserve">
+    <value>PROFILE</value>
+  </data>
+  <data name="rol" xml:space="preserve">
+    <value>ROLE</value>
+  </data>
+  <data name="sahibi" xml:space="preserve">
+    <value>OWNER</value>
+  </data>
+  <data name="sahipform" xml:space="preserve">
+    <value>REHOMING FORM</value>
+  </data>
+  <data name="sahiphayvan" xml:space="preserve">
+    <value>ANIMAL TO BE ADOPTED</value>
+  </data>
+  <data name="sahipicin" xml:space="preserve">
+    <value>To Adopt</value>
+  </data>
+  <data name="sahiplendirelecek" xml:space="preserve">
+    <value>To Be Adopted</value>
+  </data>
+  <data name="sehir" xml:space="preserve">
+    <value>CITY</value>
+  </data>
+  <data name="sifre" xml:space="preserve">
+    <value>PASSWORD</value>
+  </data>
+  <data name="sil" xml:space="preserve">
+    <value>DELETE</value>
+  </data>
+  <data name="siluyar" xml:space="preserve">
+    <value>YOU ARE ABOUT TO DELETE THE ITEM, ARE YOU SURE YOU DELETE IT?</value>
+  </data>
+  <data name="sinif" xml:space="preserve">
+    <value>2ND GRADE</value>
+  </data>
+  <data name="takimimiz" xml:space="preserve">
+    <value>OUR TEAM</value>
+  </data>
+  <data name="tarih" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="turu" xml:space="preserve">
+    <value>Kind</value>
+  </data>
+  <data name="ulke" xml:space="preserve">
+    <value>TURKEY</value>
+  </data>
+  <data name="uye" xml:space="preserve">
+    <value>USER</value>
+  </data>
+  <data name="uyegiris" xml:space="preserve">
+    <value>USER LOGIN</value>
+  </data>
+  <data name="uyeler" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="yayinlayan" xml:space="preserve">
+    <value>Publisher</value>
+  </data>
+  <data name="yeniuye" xml:space="preserve">
+    <value>NEW USER</value>
+  </data>
+</root>

@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PETNET</title>
+
+
+    <link href="~/Content/Kaynak/startbootstrap-blog-home-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="~/Content/Kaynak/startbootstrap-blog-home-gh-pages/css/blog-home.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/Home/Index/">PETNET</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Sahiplenme/">@dil.HomeTexts.sahiplenme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Blog/">@dil.HomeTexts.forum</a>
+                    </li>
+
+                    @if (Session["userid"] != null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Home/Sahiplendirme/">@dil.HomeTexts.sahiplendirme</a>
+                        </li>
+                        @*<li class="nav-item">
+                                <a class="nav-link" href="/Home/İletisim/">İLETİŞİM</a>
+                            </li>*@
+                        if (Convert.ToInt32(Session["roleid"]) == 1)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Admin/Index">@dil.HomeTexts.adminpanel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/User/Index/@Session["userid"]"><b>@Session["username"].ToString()</b></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/User/Logout/"><b>(X)</b> </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="/User/Index/@Session["userid"]"><b>@Session["username"].ToString()</b></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/User/Logout/">@dil.HomeTexts.cikis</a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/User/Create/">@dil.HomeTexts.kaydol</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/User/Login/">@dil.HomeTexts.girisyap</a>
+                        </li>
+
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-8">
+
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PETNET.Models.Blog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>BLOGLAR</h2>
+
+<p>
+    @Html.ActionLink(dil.HomeTexts.ekle, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName(@dil.HomeTexts.uye)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.kategoriler)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.baslik)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.icerik)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.fotograf)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.tarih)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategorieID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Text)
+        </td>
+        <td>
+          <img width="75" src="@item.Photo"/>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+       <td>
+            @Html.ActionLink(dil.HomeTexts.duzenle, "Edit", new {id = item.BlogID}) |
+            @Html.ActionLink(dil.HomeTexts.detaylar, "Details", new {id = item.BlogID}) |
+            @Html.ActionLink(dil.HomeTexts.sil, "Delete", new {id = item.BlogID})
+        </td>
+    </tr>
+}
+
+</table>

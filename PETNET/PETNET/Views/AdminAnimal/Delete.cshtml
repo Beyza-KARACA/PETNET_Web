@@ -1,0 +1,73 @@
+﻿@model PETNET.Models.Animal
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>@dil.HomeTexts.sil</h2>
+
+<h5>@dil.HomeTexts.siluyar</h5>
+<div>
+    <h4>@dil.HomeTexts.sahiphayvan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.ekleyenkullanici)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.ismi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.cinsiyeti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.turu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.cinsi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kind)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.fotograf)
+        </dt>
+
+        <dd>
+            <img width="75" src="@Model.Photo" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-default" /> |
+            @Html.ActionLink(@dil.HomeTexts.geri, "Index")
+        </div>
+    }
+</div>

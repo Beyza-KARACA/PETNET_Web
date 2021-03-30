@@ -1,0 +1,34 @@
+﻿@model IEnumerable<PETNET.Models.Category>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>@dil.HomeTexts.kategoriler</h2>
+
+<p>
+    @Html.ActionLink(dil.HomeTexts.ekle, "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.kategoriler)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CategorieName)
+        </td>
+        <td>
+            @Html.ActionLink(dil.HomeTexts.duzenle, "Edit", new { id=item.CategorieID }) |
+            @Html.ActionLink(dil.HomeTexts.detaylar, "Details", new { id=item.CategorieID }) |
+            @Html.ActionLink(dil.HomeTexts.sil, "Delete", new { id=item.CategorieID })
+        </td>
+    </tr>
+}
+
+</table>

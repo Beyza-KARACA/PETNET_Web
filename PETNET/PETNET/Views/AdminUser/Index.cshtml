@@ -1,0 +1,66 @@
+﻿@model IEnumerable<PETNET.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>@dil.HomeTexts.uyeler</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.rol)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.kullaniciadi)
+        </th>
+        <th>
+        @Html.DisplayName("EMAİL")
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.isimsoyad)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.fotograf)
+        </th>
+        <th>
+            @Html.DisplayName(dil.HomeTexts.sehir)
+        </th>
+        <th>
+            @Html.DisplayName("BLOGGER")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Role.Role1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+       <td>
+            @Html.DisplayFor(modelItem => item.NameSurname)
+        </td>
+        <td>
+            <img width="75" src="@item.Photo" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bloggers)
+        </td>
+        <td>
+            @Html.ActionLink(dil.HomeTexts.detaylar, "Details", new { id=item.UserID }) |
+            @Html.ActionLink(dil.HomeTexts.sil, "Delete", new { id=item.UserID })
+        </td>
+    </tr>
+}
+
+</table>

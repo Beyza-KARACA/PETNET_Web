@@ -1,0 +1,88 @@
+﻿@model IEnumerable<PETNET.Models.Animal>
+
+@{
+    ViewBag.Title = "Sahiplenme";
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+
+<h2>@dil.HomeTexts.sahiplenme</h2>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-12 col-sm-3 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="@item.Photo" alt=""></a>
+            <div class="card-body">
+                <h3>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                </h3>
+                <h6>@dil.HomeTexts.yayinlayan:  </h6>  <p> @Html.DisplayFor(modelItem => item.User.NameSurname)</p>
+                <h6>@dil.HomeTexts.ismi:  </h6>  <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                <h6>@dil.HomeTexts.cinsiyeti:  </h6> <p> @Html.DisplayFor(modelItem => item.Gender) </p>
+                <h6>@dil.HomeTexts.turu:  </h6>   <p> @Html.DisplayFor(modelItem => item.Type) </p>
+                <h6>@dil.HomeTexts.cinsi:  </h6>  <p> @Html.DisplayFor(modelItem => item.Kind) </p>
+                <h6>@dil.HomeTexts.sahipicin:  </h6>  <p> @Html.DisplayFor(modelItem => item.User.Email)</p>
+
+            </div>
+        </div>
+    </div>
+}
+
+   
+        @*<p>
+                @Html.ActionLink("Create New", "Create")
+            </p>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.User.UserName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Gender)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Type)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kind)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Photo)
+                    </th>
+                    <th></th>
+                </tr>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.UserName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Kind)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Photo)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id=item.AnimalID }) |
+                        @Html.ActionLink("Details", "Details", new { id=item.AnimalID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.AnimalID })
+                    </td>
+                </tr>
+            }
+
+            </table>*@

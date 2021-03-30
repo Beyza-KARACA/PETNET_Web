@@ -1,0 +1,74 @@
+﻿@model PETNET.Models.User
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>@dil.HomeTexts.detaylar</h2>
+
+<div>
+    <h4>ÜYE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("ROL")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Role.Role1)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.kullaniciadi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("EMAİL")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.isimsoyad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameSurname)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.fotograf)
+        </dt>
+
+        <dd>
+            <img width="75" src="@Model.Photo" />
+        </dd>
+
+        <dt>
+            @Html.DisplayName(@dil.HomeTexts.sehir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("BLOGGER")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bloggers)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(dil.HomeTexts.geri, "Index")
+</p>

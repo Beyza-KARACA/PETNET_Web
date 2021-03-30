@@ -1,0 +1,27 @@
+﻿@model PETNET.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>@dil.HomeTexts.detaylar</h2>
+
+<div>
+    <h4>@dil.HomeTexts.kategoriler</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.kategoriler)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategorieName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(dil.HomeTexts.duzenle, "Edit", new { id = Model.CategorieID }) |
+    @Html.ActionLink(dil.HomeTexts.geri, "Index")
+</p>

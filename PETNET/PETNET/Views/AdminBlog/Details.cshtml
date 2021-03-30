@@ -1,0 +1,67 @@
+﻿@model PETNET.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>BLOG</h2>
+
+<div>
+    <h4>@dil.HomeTexts.detaylar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.uye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.kategoriler)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategorieID)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.baslik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.icerik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.fotograf)
+        </dt>
+
+        <dd>
+            <img width="75" src="@Model.Photo" />
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink(dil.HomeTexts.duzenle, "Edit", new { id = Model.BlogID }) |
+    @Html.ActionLink(dil.HomeTexts.geri, "Index")
+</p>

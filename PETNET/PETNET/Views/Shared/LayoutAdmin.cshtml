@@ -1,0 +1,94 @@
+﻿@{
+    if (Session["roleID"]==null|| Convert.ToInt32(Session["roleID"]) != 1)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+   
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>ADMİN</title>
+ 
+    <link href="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <link href="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <link href="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <link href="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+ 
+</head>
+<body>
+    <div id="wrapper">
+     
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                  </button>
+                <a class="navbar-brand" href="/Admin/Index/"><b>@dil.HomeTexts.petnetadmini:@Session["username"]</b></a>
+            </div>
+      
+            <ul class="nav navbar-top-links navbar-right">
+                <li >
+                <a href="/User/Logout/"><i class="fa fa-sign-out fa-fw"></i>@dil.HomeTexts.cikis</a>
+                </li>
+            
+            </ul>
+          
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                        
+                         
+                        </li>
+                       <li>
+                            <a href="/AdminUser/Index"><i class="fa fa-edit fa-fw"></i>@dil.HomeTexts.uyeler</a>
+                        </li>
+                        <li>
+                            <a href="/AdminAnimal/Index"><i class="fa fa-edit fa-fw"></i>@dil.HomeTexts.sahiplendirelecek</a>
+                        </li>
+                        <li>
+                            <a href="/AdminBlog/Index"><i class="fa fa-edit fa-fw"></i>@dil.HomeTexts.forumlar</a>
+                        </li>
+                        <li>
+                            <a href="/AdminCategory/Index"><i class="fa fa-edit fa-fw"></i>@dil.HomeTexts.kategoriler</a>
+                        </li>
+                     
+                    </ul>
+                </div>
+              
+            </div>
+       
+        </nav>
+        <div id="page-wrapper">
+        @RenderBody()
+        </div>
+       
+    </div>
+ 
+
+    <script src="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/jquery/jquery.min.js"></script>
+  
+    <script src="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/bootstrap/js/bootstrap.min.js"></script>
+   
+    <script src="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <script src="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/raphael/raphael.min.js"></script>
+    <script src="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/vendor/morrisjs/morris.min.js"></script>
+    <script src="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/data/morris-data.js"></script>
+
+    <script src="~/Content/Kaynak/startbootstrap-sb-admin-2-gh-pages/dist/js/sb-admin-2.js"></script>
+</body>
+</html>

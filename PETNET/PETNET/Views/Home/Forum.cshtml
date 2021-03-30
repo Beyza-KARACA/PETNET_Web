@@ -1,0 +1,51 @@
+﻿@model IEnumerable<PETNET.Models.Blog>
+
+@{
+    ViewBag.Title = "Forum";
+    Layout = "~/Views/Shared/LayoutPage.cshtml";
+}
+
+<h2>@dil.HomeTexts.bloglar</h2>
+
+@{
+    if (Convert.ToInt32(Session["roleID"]) == 3)
+    {
+        <p>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <a href="/Home/ForumCreate/">@dil.HomeTexts.ekle</a>
+                </div>
+            </div>
+            
+        </p>
+    }
+
+}
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-12 col-sm-3 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="@item.Photo" alt=""></a>
+            <div class="card-body">
+                <h3>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                </h3>
+                <hr />
+                <p> <b>@dil.HomeTexts.yayinlayan : </b>@Html.DisplayFor(modelItem => item.User.UserName)</p>
+                <hr />
+                <p> <b>@dil.HomeTexts.kategoriler :  </b> @Html.DisplayFor(modelItem => item.Category.CategorieName)</p>
+                <hr />
+                <p> <b>@dil.HomeTexts.tarih : </b> @Html.DisplayFor(modelItem => item.Date)</p>
+                <hr />
+                <p> @Html.DisplayFor(modelItem => item.Text)</p>
+
+
+            </div>
+        </div>
+    </div>
+}
+
+

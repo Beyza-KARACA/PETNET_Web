@@ -1,0 +1,73 @@
+﻿@model PETNET.Models.Blog
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>@dil.HomeTexts.sil</h2>
+
+<h5>@dil.HomeTexts.siluyar</h5>
+<div>
+    <h4>BLOG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.uye)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.kategoriler)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategorieID)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.kategoriler)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.icerik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.fotograf)
+        </dt>
+
+        <dd>
+            <img width="75" src="@Model.Photo" />
+        </dd>
+
+        <dt>
+            @Html.DisplayName(dil.HomeTexts.tarih)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+       </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-default" /> |
+            @Html.ActionLink(dil.HomeTexts.geri, "Index")
+        </div>
+    }
+</div>
